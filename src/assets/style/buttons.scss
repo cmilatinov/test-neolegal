@@ -1,0 +1,23 @@
+@keyframes btn-animate-loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button.btn.loading {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    & > i {
+        $loader-size: 15pt;
+        display: inline-block;
+        animation: btn-animate-loading 1s ease-out infinite;
+        height: $loader-size;
+        line-height: $loader-size;
+        font-size: $loader-size;
+    }
+}
